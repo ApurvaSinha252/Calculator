@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #141e30, #243b55);
+}
+
+.calculator {
+    width: 360px;
+    padding: 25px;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+.calculator-header {
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.calculator-header h1 {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.calculator-header p {
+    font-size: 13px;
+    opacity: 0.75;
+}
+
+.display {
+    min-height: 110px;
+    padding: 20px;
+    margin-bottom: 18px;
+    border-radius: 15px;
+    background: rgba(233, 32, 32, 0.3);
+    color: white;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+}
+
+#previous-operand {
+    min-height: 25px;
+    font-size: 16px;
+    opacity: 0.6;
+}
+
+#current-operand {
+    font-size: 38px;
+    font-weight: bold;
+    word-wrap: break-word;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    height: 60px;
+    border: none;
+    border-radius: 14px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    background: rgba(225, 240, 245, 0.9);
+    transition: transform 0.15s, opacity 0.15s;
+}
+
+button:hover {
+    opacity: 0.8;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.operator {
+    background: #ff9f43;
+    color: white;
+}
+
+.equals {
+    background: #2ed573;
+    color: white;
+}
+
+.clear {
+    background: #fa0b2f;
+    color: white;
+}
+
+.delete {
+    background: #576574;
+    color: white;
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+@media (max-width: 420px) {
+    .calculator {
+        width: 92%;
+        padding: 20px;
+    }
+
+    button {
+        height: 55px;
+    }
+}
